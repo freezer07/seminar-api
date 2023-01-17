@@ -119,10 +119,10 @@ class SeminarEvent {
   }
 
   getEvent (param={}, callback) {
-    let event_id = param['event_id']||0;
+    let event_id = +param['event_id']||0;
 
     let result = null;
-    if( event_id!='' ){
+    if( event_id>0 ){
       let query = `
         SELECT
           ev.*,

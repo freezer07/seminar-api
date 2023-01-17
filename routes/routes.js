@@ -32,7 +32,7 @@ router.route('/event')
     return res.json({
       result_code: 0,
       result_msg: (result)? 'success':'failed',
-      event_data: (result)? result:[]
+      event_data: (result)? result:null
     });
   });
 });
@@ -62,7 +62,7 @@ router.route('/visitor')
     return res.json({
       result_code: 1,
       result_msg: (result)? 'success':'failed',
-      visitor_data: (result)? result:[]
+      visitor_data: (result)? result:null
     });
   });
 });

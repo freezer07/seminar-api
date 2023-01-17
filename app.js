@@ -16,12 +16,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/api/seminar/', [apiRouter]);
+app.use('/api/seminar/', apiRouter);
 
-app.use(function(req, res, next) {
-  var err = createError(404);
-  next(err);
-});
+// app.use(function(req, res, next) {
+//   var err = createError(404);
+//   next(err);
+// });
   
 app.listen(port, function() {
   console.log(`Example app listening on port ${port}!`)
